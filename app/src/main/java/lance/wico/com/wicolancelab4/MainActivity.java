@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -48,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
     public void showSnackbar(View view, String message, int duration)
     {
         Snackbar.make(view, message, duration).show();
+    }
+
+
+    @Override
+    protected void onStart(){
+
+        super.onStart();
+        Log.d( "Lab Activity 4", "onResume() has executed");
+
     }
 
 }
